@@ -21,40 +21,37 @@
 	</script>
 </head>
 <body>
-<div class="container">
-
-	<!-- header -->
-	<div class="header">
-		<div class="header-logo">
-			<div class="text-center">
+	<!-- sticky navigation -->
+	<nav class="sticky-nav" id="sticky-nav">
+		<div class="nav-container">
+			<div class="nav-logo">
 				<a href="/" title="Magalie DERUD - Avocat à Bourgoin Jallieu">
 					<img src="/images/logo.png" alt="Magalie DERUD - Avocat à Bourgoin Jallieu">
 				</a>
 			</div>
-			<div class="header-logo-baseline">
-				<strong>04.37.03.56.69</strong>
+			<div class="nav-toggle" id="nav-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
 			</div>
-			<div class="header-logo-baseline">
-				<a href="/bourgoin-jallieu/contact.htm" title="Contact &amp; plan d'accès">Contact &amp; Plan d'accès</a>
-			</div>
+			<ul class="nav-menu" id="nav-menu">
+				<li><a href="/" title="Magalie DERUD - Avocat à Bourgoin Jallieu">Accueil</a></li>
+				<li><a href="/bourgoin-jallieu/divorce_separation.htm" title="Divorce / Séparation Isère">Divorce / Séparation</a></li>
+				<li><a href="/bourgoin-jallieu/partage_des_biens.htm" title="Partage des biens Isère">Partage des biens</a></li>
+				<li><a href="/bourgoin-jallieu/contrats_et_responsabilite.htm" title="Contrats et responsabilité Isère">Contrats et responsabilité</a></li>
+				<li><a href="/bourgoin-jallieu/droit_penal.htm" title="Droit pénal Isère">Droit pénal</a></li>
+				<li><a href="/bourgoin-jallieu/droit_du_travail.htm" title="Droit du travail Isère">Droit du travail</a></li>
+			</ul>
 		</div>
-		<div class="header-image"></div>
-	</div>
-	<div class="clear-space"></div>
-	<hr>
+	</nav>
 
-	<!-- sidebar -->
-	<div class="sidebar">
-		<ul class="menu">
-			<li class="menu_separator"><a href="/" title="Magalie DERUD - Avocat à Bourgoin Jallieu">Accueil</a></li>
-			<li><a href="/bourgoin-jallieu/divorce_separation.htm" title="Divorce / Séparation Isère">Divorce / Séparation</a></li>
-			<li class="menu_separator"><a href="/bourgoin-jallieu/partage_des_biens.htm" title="Partage des biens Isère">Partage des biens</a></li>
-			<li class="menu_separator"><a href="/bourgoin-jallieu/contrats_et_responsabilite.htm" title="Contrats et responsabilité Isère">Contrats et responsabilité</a></li>
-			<li class="menu_separator"><a href="/bourgoin-jallieu/droit_penal.htm" title="Droit pénal Isère">Droit pénal</a></li>
-			<li class="menu_separator"><a href="/bourgoin-jallieu/droit_du_travail.htm" title="Droit du travail Isère">Droit du travail</a></li>
-			<li><a href="/bourgoin-jallieu/donnees_personnelles.htm" title="Données personnelles">Données personnelles</a></li>
-		</ul>
-	</div>
+	<div class="container">
+		<!-- header -->
+		<div class="header">
+			<div class="header-image"></div>
+		</div>
+		<div class="clear-space"></div>
+		<hr>
 
 	<!-- content  -->
 	<div class="content">
@@ -95,10 +92,42 @@
 	<div class="clear-space"></div>
 	<hr>
 
-	<!-- footer -->
-	<div class="footer">
-		Maître Magalie DERUD, 29 Avenue Maréchal Leclerc, 38300 Bourgoin-Jallieu - Tél: 04.37.03.56.69
+		<!-- footer -->
+		<div class="footer">
+			<div class="footer-content">
+				<div class="footer-contact">
+					<strong>04.37.03.56.69</strong> |
+					<a href="/bourgoin-jallieu/contact.htm" title="Contact &amp; plan d'accès">Contact &amp; Plan d'accès</a>
+				</div>
+				<div class="footer-address">
+					Maître Magalie DERUD, 29 Avenue Maréchal Leclerc, 38300 Bourgoin-Jallieu
+				</div>
+				<div class="footer-links">
+					<a href="/bourgoin-jallieu/donnees_personnelles.htm" title="Données personnelles">Données personnelles</a>
+				</div>
+			</div>
+		</div>
 	</div>
-</div>
+	<script>
+		// Hamburger menu toggle functionality
+		document.addEventListener('DOMContentLoaded', function() {
+			var navToggle = document.getElementById('nav-toggle');
+			var navMenu = document.getElementById('nav-menu');
+
+			navToggle.addEventListener('click', function() {
+				navToggle.classList.toggle('active');
+				navMenu.classList.toggle('active');
+			});
+
+			// Close menu when clicking on a link (for mobile)
+			var menuLinks = navMenu.getElementsByTagName('a');
+			for (var i = 0; i < menuLinks.length; i++) {
+				menuLinks[i].addEventListener('click', function() {
+					navToggle.classList.remove('active');
+					navMenu.classList.remove('active');
+				});
+			}
+		});
+	</script>
 </body>
 </html>
