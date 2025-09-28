@@ -19,7 +19,7 @@ b, strong { font-weight: 700; }
 .sidebar { padding: 0 10px 0 10px; width: 215px; float: left; }
 .content { width: 725px; float: right; }
 .image-embed { width: 200px; float: right; margin-bottom: 20px; padding: 4px 0 0 8px; }
-.footer { margin-top: 10px; width: 960px; height: 25px; text-align: center; font-size: 85%; color: #999; }
+.footer { margin-top: 10px; width: 960px; height: 25px; text-align: center; font-size: 85%; color: #666; }
 .sidebar ul { padding: 0; list-style: inside; }
 .menu a:hover { color: #A17C24; text-decoration: underline; }
 .menu li a { font-weight: 700; text-decoration:none; }
